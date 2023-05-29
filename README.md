@@ -1,4 +1,4 @@
-# NASA Sounds Downloader
+# NASA Sound Library Downloader
 
 This project is a script that downloads audio files from the NASA sounds library page. It uses Selenium and BeautifulSoup to fetch the HTML content, parse the links, and download the audio files.
 
@@ -13,7 +13,6 @@ This project is a script that downloads audio files from the NASA sounds library
 - Python 3.x
 - Selenium
 - BeautifulSoup
-- Requests
 - WebDriver Manager
 
 ## Installation
@@ -21,13 +20,13 @@ This project is a script that downloads audio files from the NASA sounds library
 1. Clone the repository:
 
 ```
-git clone https://github.com/yourusername/yourrepository.git
+git clone https://github.com/Apocrathia/NSL-Downloader.git
 ```
 
 2. Change to the project directory:
 
 ```
-cd yourrepository
+cd NSL-Downloader
 ```
 
 3. Install the required packages:
@@ -41,7 +40,7 @@ pip install -r requirements.txt
 Run the script using the following command:
 
 ```
-python nasa_sounds_downloader.py
+python main.py
 ```
 
 This will download the audio files to a directory named "nasa_sounds" in the project directory.
