@@ -52,4 +52,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## Contributing
 
-If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome. 
+If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
