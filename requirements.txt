@@ -4,4 +4,4 @@
 beautifulsoup4==4.12.2
 requests==2.31.0
 selenium==4.9.1
-webdriver-manager==4.8.1
+webdriver-manager==3.8.6
