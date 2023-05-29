@@ -67,7 +67,7 @@ for link in audio_links:
     download_path = os.path.join(DOWNLOAD_DIRECTORY, file_name)
 
     # Download and save the audio file
-    response = requests.get(link['href'], stream=True, Timeout=10)
+    response = requests.get(link['href'], stream=True, timeout=10)
     with open(download_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=1024):
             if chunk:
