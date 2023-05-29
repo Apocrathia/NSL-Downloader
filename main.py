@@ -1,5 +1,9 @@
 #!/opt/homebrew/bin/python3
 
+"""
+This module contains the main script for the web scraper.
+"""
+
 import os
 import re
 import requests
@@ -10,6 +14,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
+
+DOWNLOAD_DIRECTORY = "nasa_sounds"
 
 # Set up the Selenium WebDriver
 service = Service(ChromeDriverManager().install())
@@ -43,8 +49,7 @@ audio_links = [link for link in links if regex_pattern.match(link['href'])]
 print(f"Found {len(audio_links)} audio_links")
 
 # Download and save the audio files
-download_directory = "nasa_sounds"
-os.makedirs(download_directory, exist_ok=True)
+os.makedirs(DOWNLOAD_DIRECTORY, exist_ok=True)
 
 for link in audio_links:
     # Get the hyperlink text
@@ -59,10 +64,10 @@ for link in audio_links:
 
     # Combine the cleaned hyperlink text with the file extension
     file_name = f"{cleaned_text}{file_extension}"
-    download_path = os.path.join(download_directory, file_name)
+    download_path = os.path.join(DOWNLOAD_DIRECTORY, file_name)
 
     # Download and save the audio file
-    response = requests.get(link['href'], stream=True)
+    response = requests.get(link['href'], stream=True, Timeout=10)
     with open(download_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=1024):
             if chunk:
