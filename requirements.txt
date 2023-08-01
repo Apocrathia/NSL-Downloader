@@ -3,5 +3,5 @@
 # Required packages
 beautifulsoup4==4.12.2
 requests==2.31.0
-selenium==4.10.0
+selenium==4.11.2
 webdriver-manager==4.0.0
